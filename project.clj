@@ -44,4 +44,6 @@
                                                                 :optimizations :advanced
                                                                 :pretty-print false
                                                                 :output-dir "target/out"
-                                                                :closure-defines {goog.DEBUG false}}}}}}})
+                                                                :closure-defines {goog.DEBUG false}}}}}}}
+
+  :aliases {"build" ["do" "clean" ["with-profile" "production" "cljsbuild" "once"]]})
