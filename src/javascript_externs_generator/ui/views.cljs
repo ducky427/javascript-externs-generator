@@ -104,13 +104,8 @@
                :label "JavaScript Externs Generator"
                :underline? true
                :level :level1]
-
               [alert-box]
-
               [load-js]
-
               [loaded-javascripts]
-
               [generate-externs]
-
               [externed-namespaces]]])

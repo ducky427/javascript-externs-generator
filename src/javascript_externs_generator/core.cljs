@@ -6,6 +6,10 @@
             [javascript-externs-generator.ui.handlers]
             [javascript-externs-generator.ui.views :as ui]))
 
-(defn ^:export init []
-  (rf/dispatch-sync [:initialize])
+(defn mount-root
+  []
   (reagent/render [ui/extern-generator] (dom/getElement "extern-generator")))
+
+(defn init! []
+  (rf/dispatch-sync [:initialize])
+  (mount-root))

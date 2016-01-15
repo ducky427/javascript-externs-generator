@@ -1,12 +1,8 @@
 pom.xml
 figwheel_server.log
 *jar
-/lib/
-/classes/
-/out/
-/out-adv/
-/assets/js/javascript_externs_generator.js
 /target/
 .lein-deps-sum
 .lein-repl-history
 .lein-plugins/
+/resources/public/js/compiled/**
