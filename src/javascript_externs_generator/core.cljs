@@ -8,7 +8,7 @@
 
 (defn mount-root
   []
-  (reagent/render [ui/extern-generator] (dom/getElement "extern-generator")))
+  (reagent/render [ui/extern-generator] (dom/getElement "app")))
 
 (defn init! []
   (rf/dispatch-sync [:initialize])
