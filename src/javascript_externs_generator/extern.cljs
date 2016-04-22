@@ -14,8 +14,10 @@
   (let [proto     (.-prototype obj)]
     {:name      name
      :type      (get-type obj)
-     :props     (for [k (js-keys obj)
-                      :let [child (aget obj k)]]
+     :props     (for [k (remove #(.startsWith % "_") (js-keys obj))
+                      :let [child (if (= name "models")
+                                    ((aget obj k))
+                                    (aget obj k))]]
                   (if (and (parent-type? child)
                          (not (identical? obj child)))
                     (build-tree child k)
